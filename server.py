@@ -74,16 +74,13 @@ class MyController(object):
     def POST(self):
         data = cherrypy.request.json
         res = self.collection.insert_one(data)
-        return 0
+        return data["id"]
 
 
     @cherrypy.tools.json_out()
     @cherrypy.tools.json_in()
     def PUT(self):
         data = cherrypy.request.json
-        print("**********************")
-        print(data)
-        print("**********************")
         filter = { "id": data["id"] }
         update = { "$set": { 
             "artist": data["artist"], 

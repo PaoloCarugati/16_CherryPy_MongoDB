@@ -95,7 +95,7 @@ url = 'http://127.0.0.1:8080/dischi'
 
 
 
-#callGET()
+callGET()
 
 disco = {
             "id": 5,
@@ -106,11 +106,11 @@ disco = {
         }
 
 callPOST(disco)
-#callGET()
+callGET()
 
 disco["year"] = 1980
 callPUT(disco)
-#callGET(5)
+callGET(5)
 
-#callDELETE(5)
-#callGET()
+callDELETE(5)
+callGET()
